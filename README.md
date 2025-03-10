@@ -16,6 +16,27 @@ Desenvolver um jogo de Pedra, Papel ou Tesoura entre dois jogadores, utilizando 
 - Após exibir o resultado, o jogo deve perguntar se os jogadores desejam continuar ou voltar ao início.
 - Tratar entradas inválidas (ex.: clique inválido).
 
+
+
 ## 🚀 Desafio Extra (opcional)
 
 - Adicionar um histórico de jogadas exibindo as últimas 5 rodadas.
+
+📌 Submissão
+
+1. Crie uma nova branch para a sua implementação:
+
+ ```bash
+git checkout -b feature/pedra-papel-tesoura
+```
+
+2. Commit e push:
+
+ ```bash
+git add .
+git commit -m "Implementação do jogo Pedra, Papel e Tesoura"
+git push origin feature/pedra-papel-tesoura
+```
+
+3. Abra um Pull Request para a branch main no GitHub.
+
