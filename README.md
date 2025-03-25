@@ -16,27 +16,32 @@ Desenvolver um jogo de Pedra, Papel ou Tesoura entre dois jogadores, utilizando 
 - Após exibir o resultado, o jogo deve perguntar se os jogadores desejam continuar ou voltar ao início.
 - Tratar entradas inválidas (ex.: clique inválido).
 
-
-
 ## 🚀 Desafio Extra (opcional)
 
 - Adicionar um histórico de jogadas exibindo as últimas 5 rodadas.
+
+## 🚀 Desafio Extra 2 (opcional)
+
+- Adicionar um modo single-player
 
 📌 Submissão
 
 1. Crie uma nova branch para a sua implementação:
 
- ```bash
+```bash
 git checkout -b feature/pedra-papel-tesoura
 ```
 
-2. Commit e push:
+caso exitir um card no board, vincular, mantendo o numero no card na branch, ex: feature/CARD-001-pedra-papel-tesoura
 
- ```bash
+2. Commit e push, seguir regras[conventinal commits](https://www.conventionalcommits.org/en/v1.0.0/):
+
+```bash
 git add .
-git commit -m "Implementação do jogo Pedra, Papel e Tesoura"
+git commit -m "feat: Implementação do jogo Pedra, Papel e Tesoura"
 git push origin feature/pedra-papel-tesoura
 ```
 
-3. Abra um Pull Request para a branch main no GitHub.
+caso exitir um card no board, vincular, mantendo o numero no card na branch, ex: "feat: [CARD-001] - Implementação do jogo Pedra, Papel e Tesoura"
 
+3. Abra um Pull Request para a branch main no GitHub.
