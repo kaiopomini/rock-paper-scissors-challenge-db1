@@ -128,7 +128,8 @@ historyButton.addEventListener("click", () => {
   const history = getPlayHistory()
 
   if (history.length > 0) {
-    return alert(history.join("\n"))
+    const lastFiveGames = history.slice(-5);
+    return alert(lastFiveGames.join("\n"));
   }
 
   return alert("Histórico vazio!");
