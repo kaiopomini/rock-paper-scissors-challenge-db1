@@ -37,4 +37,16 @@ button {
   margin-top: 10px;
   padding: 5px 10px;
   font-size: 1em;
+
+  cursor: pointer;
+}
+
+#game-mode {
+  display: flex;
+  gap: .5rem;
+}
+
+#options {
+  display: none;
+  flex-direction: column;
 }
