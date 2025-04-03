@@ -30,19 +30,24 @@
   </div>
   <div id="result"></div>
   <div id="score">
-    <p>
-      Placar: Jogador 1 <span id="score1">0</span> -
-      <span id="score2">0</span> Jogador 2
-    </p>
+    <p>Placar:</p>
+    <div class="score">
+      <p>Jogador 1</p>
+      <div class="scoreboard">
+        <span id="score1">0</span> -
+        <span id="score2">0</span>
+      </div>
+      <p>Jogador 2</p>
+    </div>
   </div>
   <div id="game-mode">
-    <button id="pvp">Jogar Contra um Amigo</button>
-    <button id="pve">Desafiar o Computador</button>
+    <button class="game-action-button" id="pvp">Jogar Contra um Amigo</button>
+    <button class="game-action-button" id="pve">Desafiar o Computador</button>
   </div>
   <div id="options">
-    <button id="continue">Continuar</button>
-    <button id="restart">Voltar ao Início</button>
-    <button id="history">Ver histórico</button>
+    <button class="game-action-button" id="continue">Continuar</button>
+    <button class="game-action-button" id="restart">Voltar ao Início</button>
+    <button class="game-action-button" id="history">Ver histórico</button>
   </div>
   <script src="script.js"></script>
 </body>

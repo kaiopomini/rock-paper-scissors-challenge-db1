@@ -107,6 +107,8 @@ player1Choices.forEach((choice) => {
   choice.addEventListener("click", () => {
     if (currentPlayer !== 1 || player1Choice) return;
 
+    choice.classList.add("active-choice");
+
     player1Choice = choice.dataset.choice;
     alert("Jogador 1 escolheu: " + player1Choice);
     currentPlayer = 2;
@@ -114,7 +116,11 @@ player1Choices.forEach((choice) => {
 
     if (gameModeSelected === "pve") {
       setTimeout(() => {
-        player2Choice = ["pedra", "papel", "tesoura"][Math.floor(Math.random() * 3)];
+        const randomIndex = Math.floor(Math.random() * 3)
+        const botChoiceElement = player2Choices[randomIndex]
+        player2Choice = botChoiceElement.dataset.choice
+        botChoiceElement.classList.add("active-choice")
+
         alert("Computador escolheu: " + player2Choice);
         playRound();
         disabledChoices(true, true);
@@ -126,6 +132,8 @@ player1Choices.forEach((choice) => {
 player2Choices.forEach((choice) => {
   choice.addEventListener("click", () => {
     if (currentPlayer !== 2 || player2Choice || gameModeSelected !== "pvp") return;
+
+    choice.classList.add("active-choice");
 
     player2Choice = choice.dataset.choice;
     alert("Jogador 2 escolheu: " + player2Choice);
@@ -139,6 +147,7 @@ continueButton.addEventListener("click", () => {
   resetChoices();
   disabledChoices(false, true)
   result.textContent = "";
+  document.querySelectorAll(".choice").forEach(choice => choice.classList.remove("active-choice"))
 });
 
 restartButton.addEventListener("click", () => {
@@ -152,6 +161,7 @@ restartButton.addEventListener("click", () => {
   result.textContent = "";
   gameMode.style.display = 'flex'
   options.style.display = 'none'
+  document.querySelectorAll(".choice").forEach(choice => choice.classList.remove("active-choice"))
 });
 
 historyButton.addEventListener("click", () => {
@@ -180,6 +190,10 @@ pve.addEventListener("click", () => {
   enableGameButtons();
   disabledChoices(false, true);
 })
+
+window.onload = () => {
+  clearPlayHistory();
+}
 
 updateScore();
 disableAllButtons(true);
